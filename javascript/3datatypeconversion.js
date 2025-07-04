@@ -21,7 +21,7 @@ let boolenaIsLoggedIn=Boolean(isloggedIn);
 console.log(boolenaIsLoggedIn);*/
 
 
-let isloggedIn="fatima";
+/*let isloggedIn="fatima";
 let boolenaIsLoggedIn=Boolean(isloggedIn);
 console.log(boolenaIsLoggedIn);
 
@@ -36,14 +36,53 @@ console.log(boolenaIsLoggedIn);
 let someNumber=22;
 let stringNumber=String(someNumber);
 console.log(stringNumber);
-console.log(typeof stringNumber);
+console.log(typeof stringNumber);*/
 
 
 
 //******************************************Operations***********************************
 
 
+/*let value =3;
+let negValue=-value;
+console.log(negValue);
+console.log(2+2);
+console.log(2-2);
+console.log(2*2);
+console.log(2**2);
+console.log(2/3);
+console.log(2%3);*/
+
+//let str1='hello';
+//let str2='fatima';
+//let str3=str1+str2;
+//console.log(str3);
 
 
+console.log("1"+2);//->12
+console.log(1+"2");//->12
+console.log("1"+2+2);//->122
+console.log(1+2+"2");//->32
 
+/*String + Number = String: If any operand is a string, JavaScript converts the other to a string and joins them.
+Left to Right: JavaScript evaluates expressions from left to right, which affects how strings and numbers combine.*/
+
+//INCREMENT IN JAVASCRIPT  
+
+
+let x = 3;
+const y = x++;
+
+console.log(`x:${x}, y:${y}`);// Expected output: "x:4, y:3"
+
+
+let a = 3;
+const b = ++a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4"
+
+/*If used postfix, with operator after operand (for example, x++), the increment operator increments and returns the value before incrementing.
+
+If used prefix, with operator before operand (for example, ++x), the increment operator increments and returns the value after incrementing.*/
 
