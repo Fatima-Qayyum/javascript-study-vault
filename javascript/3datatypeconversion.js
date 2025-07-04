@@ -1,7 +1,18 @@
+
+let score='33abc';
+console.log(typeof score);
+console.log(typeof (score));
+
 /*let score=null;//33abc, true,false,undefined check all these things for better understanding;
 console.log(typeof score);
 console.log(typeof (score));
 
+
+
+let valueInNumber=Number(score);
+console.log(typeof valueInNumber);
+console.log(valueInNumber);
+=======
 let valueInNumber=Number(score);
 console.log(typeof valueInNumber);
 console.log(valueInNumber);*/
@@ -85,4 +96,5 @@ console.log(`a:${a}, b:${b}`);
 /*If used postfix, with operator after operand (for example, x++), the increment operator increments and returns the value before incrementing.
 
 If used prefix, with operator before operand (for example, ++x), the increment operator increments and returns the value after incrementing.*/
+
 
