@@ -39,5 +39,28 @@ const outSideTemp=null;
  const id=Symbol('123');
  const anotherId =Symbol('123');
  console.log (id==anotherId) //false;
+
+ const bidNumber=34555666666666666666n;
+
+
+ const heros=['ali','hassan','hussain'];
+
+ let person={name:hitesh,
+    age:22,
+
+ }
+
+
+ const myFunction=function(){
+    console.log('heelo world');
+
+
+ }
+
+
+ // type of tell us about the datatype of variable;
+  
+
+
  
 
