@@ -1,21 +1,21 @@
 
 let score='33abc';
-console.log(typeof score);
+console.log(typeof score);/*33abc true,false,undefined check all these things for better understanding*/
 console.log(typeof (score));
 
-/*let score=null;//33abc, true,false,undefined check all these things for better understanding;
-console.log(typeof score);
-console.log(typeof (score));
+let score1 =null;
+console.log(typeof score1);
+console.log(typeof (score1));
 
 
 
 let valueInNumber=Number(score);
 console.log(typeof valueInNumber);
 console.log(valueInNumber);
-=======
-let valueInNumber=Number(score);
-console.log(typeof valueInNumber);
-console.log(valueInNumber);*/
+//=======
+let valueInNumber1=Number(score);
+console.log(typeof valueInNumber1);
+console.log(valueInNumber1);
 
 
 //"33"-> 33
@@ -32,7 +32,7 @@ let boolenaIsLoggedIn=Boolean(isloggedIn);
 console.log(boolenaIsLoggedIn);*/
 
 
-/*let isloggedIn="fatima";
+let isloggedIn="fatima";
 let boolenaIsLoggedIn=Boolean(isloggedIn);
 console.log(boolenaIsLoggedIn);
 
@@ -47,14 +47,14 @@ console.log(boolenaIsLoggedIn);
 let someNumber=22;
 let stringNumber=String(someNumber);
 console.log(stringNumber);
-console.log(typeof stringNumber);*/
+console.log(typeof stringNumber);
 
 
 
 //******************************************Operations***********************************
 
 
-/*let value =3;
+let value =3;
 let negValue=-value;
 console.log(negValue);
 console.log(2+2);
@@ -62,12 +62,12 @@ console.log(2-2);
 console.log(2*2);
 console.log(2**2);
 console.log(2/3);
-console.log(2%3);*/
+console.log(2%3);
 
-//let str1='hello';
-//let str2='fatima';
-//let str3=str1+str2;
-//console.log(str3);
+let str1='hello';
+let str2='fatima';
+let str3=str1+str2;
+console.log(str3);
 
 
 console.log("1"+2);//->12
