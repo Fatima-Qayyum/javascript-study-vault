@@ -33,14 +33,14 @@ function show() {
 show(); // Output: [object Window]
 
 
-alert("Hello!");         // this works
-window.alert("Hello!");  // this also works (same thing)
+//alert("Hello!");         // this works
+//window.alert("Hello!");  // this also works (same thing)
 
 
 /*note:  Outside any function or inside a regular function (non-strict mode), this is the same as window.*/
 
 
-/*🪟 What is window in JavaScript?
+/* What is window in JavaScript?
 window is the main object in the browser that holds everything related to your web page.
 
 You can think of it like a big container that includes:
@@ -52,14 +52,14 @@ You can think of it like a big container that includes:
 ✅ Dialog boxes (alert, prompt, confirm)*/
 
 
-console.log(window); // shows the full window object
+//console.log(window); // shows the full window object
 
-var name = "Fatima";
-console.log(window.name); // Fatima
+//var name = "Fatima";
+//console.log(window.name); // Fatima
 
 
-window.alert("Hi!");        // same as alert("Hi!")
-window.setTimeout(...);     // same as setTimeout(...)
-console.log(window.document); // shows the HTML document
+//window.alert("Hi!");        // same as alert("Hi!")
+//window.setTimeout(...);     // same as setTimeout(...)
+//console.log(window.document); // shows the HTML document
 
 //If you write a variable or function in global scope, it becomes part of the window object (if you use var).

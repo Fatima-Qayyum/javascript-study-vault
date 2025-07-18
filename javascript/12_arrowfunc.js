@@ -61,6 +61,16 @@ console.log(add3(10,10));
 
 //Without return:
 
-const add = (a, b) => {
+const add10 = (a, b) => {
   a + b; //  returns undefined
 };
+console.log(add10(3,6));
+
+
+/*------------------------ Implicit Return with Objects---------------------------------*/
+
+//Wrap object in parentheses () to return it implicitly:
+
+const getUser = () => ({ name: "Fatima", age: 20 });
+console.log(getUser());
+// Output: { name: "Fatima", age: 20 }   Without (), it will be treated as a block and return undefined
