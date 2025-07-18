@@ -56,3 +56,10 @@ console.log(window); // shows the full window object
 
 var name = "Fatima";
 console.log(window.name); // Fatima
+
+
+window.alert("Hi!");        // same as alert("Hi!")
+window.setTimeout(...);     // same as setTimeout(...)
+console.log(window.document); // shows the HTML document
+
+//If you write a variable or function in global scope, it becomes part of the window object (if you use var).
