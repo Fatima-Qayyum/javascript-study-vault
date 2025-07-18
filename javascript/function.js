@@ -164,16 +164,110 @@ const sayHello1 = function() {
 
 
 // Function Declaration
-function add(a, b) {
+function add1(a, b) {
   return a + b;
 }
-console.log(add(2, 3)); // ✅ Output: 5
+console.log(add1(2, 3)); // ✅ Output: 5
 
 // Function Expression
 const subtract = function(a, b) {
   return a - b;
 };
 console.log(subtract(5, 2)); // ✅ Output: 3
+
+
+
+
+
+/* -------------------------------------higher order functions-----------------*/
+
+
+/*A higher-order function is a function that either:
+->Takes another function as an argument, or
+->Returns a function as its result.*/
+
+function greet(name) {
+  return "Hello, " + name;
+}
+
+function processUser(greetFunction, userName) {
+  console.log(greetFunction(userName));
+}
+
+processUser(greet, "Fatima");  // Output: Hello, Fatima
+
+
+
+
+
+function getChecker(type) {
+  console.log("You asked for a", type, "checker.");
+
+  if (type === "even") {
+    return function(num) {
+      console.log("Checking if", num, "is even.");
+      return num % 2 === 0;
+    };
+  } else if (type === "odd") {
+    return function(num) {
+      console.log("Checking if", num, "is odd.");
+      return num % 2 !== 0;
+    };
+  } else {
+    return function() {
+      console.log("Invalid checker type!");
+      return "Invalid type";
+    };
+  }
+}
+getChecker(9);
+
+
+
+
+
+
+/*----------------------------------------function as objects------------------------------------*/
+
+
+
+let calculator={
+
+
+  add: function(a,b){
+    return a+b;
+  },
+  sub:function(a,b){
+    return a-b;
+  },
+  mul:function(a,b){
+
+  }
+}
+
+
+
+
+//short hand for functions as objects
+
+/*let calculator={
+
+
+  add: function(a,b){
+    return a+b;
+  },
+  sub:function(a,b){
+    return a-b;
+  },
+  mul:function(a,b){
+
+  }
+}*/
+
+console.log(calculator.add(2,3));//5
+
+
+
 
 
 /*------------------------------------------------practice questions--------------------------------------------*/
