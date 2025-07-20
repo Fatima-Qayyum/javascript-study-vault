@@ -74,3 +74,22 @@ console.log(add10(3,6));
 const getUser = () => ({ name: "Fatima", age: 20 });
 console.log(getUser());
 // Output: { name: "Fatima", age: 20 }   Without (), it will be treated as a block and return undefined
+
+
+
+
+
+/*-----------------------------------practice questions----------------------------------------*/
+
+
+
+// Q1: write a arrow function that returns the square of a  number n;
+
+let square1=(n)=>{
+  return n*n;
+}
+console.log(square1(7));
+
+let square2=(z)=>z*z;
+
+console.log(square2(10));
