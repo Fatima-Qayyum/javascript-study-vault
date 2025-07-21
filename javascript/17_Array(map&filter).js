@@ -75,8 +75,64 @@ console.log(studentsScore);
 
 /*---------------------------------------ARRAY(SOME& EVERY)-------------------------------------*/
 
+//array.every() Returns true only if all elements in the array match the condition.
+
+const scores = [80, 70, 90];
+const allPassed = scores.every(score => score >= 50);
+console.log(allPassed); // true (because all scores ≥ 50)
+
+
+ //array.some() Returns true if at least one element in the array matches the condition.
+
+
+ const score1 = [30, 40, 70];
+const someonePassed = score1.some(score => score >= 50);
+console.log(someonePassed); // true (only 70 is ≥ 50)
 
 
 
+const score2 = [20, 10, 30];
+const anyPass = score2.some(score => score >= 50);
+console.log(anyPass); // false
 
 
+/*-------------------------------------practice of some and every------------------------------*/
+
+
+//Q1: Check if all numbers are positive  
+const nums = [3, 5, 8, 10];
+const allPositive = nums.every(n => n > 0);
+console.log(allPositive); // true
+
+
+
+//Q2: Check if all names are strings
+const name1 = ['Ali', 'Sara', 'Zainab'];
+const allStrings = names.every(name => typeof name === 'string');
+console.log(allStrings); // true
+
+
+
+//Q3: Check if all scores are above 70
+
+const score3 = [85, 72, 69];
+const allAbove70 = score3.every(score => score > 70);
+console.log(allAbove70); // false (69 fails)
+
+//Q4: Check if any number is even
+const number3 = [1, 3, 7, 8];
+const hasEven = number3.some(n => n % 2 === 0);
+console.log(hasEven); // true (8 is even)
+
+
+//Q5: Check if any fruit is "banana"
+const fruits = ['apple', 'peach', 'banana'];
+const hasBanana = fruits.some(fruit => fruit === 'banana');
+console.log(hasBanana); // true
+
+
+// Q6: Check if all numbers are multiple of 10 or not;
+
+let  multipleArray=[10,20,30,40,35,60,70];
+let checkMultiple=multipleArray.every((e)=> e%10==0);
+console.log(` checkmultiple : ${checkMultiple}`);  //false
