@@ -2,7 +2,7 @@
 
 
 function hello() {    // function defination
-    console.log('hello');   // Code to be executed   
+  console.log('hello');   // Code to be executed   
 }
 
 hello();// function call
@@ -11,7 +11,7 @@ hello();
 
 /*-------------------------------------function with arguments-------------------------------------------*/
 function printName(name) {  //name is argument that
-    console.log(name)
+  console.log(name)
 }
 
 printName('fatima');// fatima is the parameter that stores the parameter
@@ -19,8 +19,8 @@ printName('fatima');// fatima is the parameter that stores the parameter
 
 
 function printInfo(name, age) {  //name is argument that
-    console.log(name)
-    console.log(age);
+  console.log(name)
+  console.log(age);
 }
 
 printInfo('fatima', 20);// fatima is the parameter that stores the parameter
@@ -36,8 +36,8 @@ Send back a value to where the function was called
 Stop the function’s execution immediately*/
 
 function sum(a, b) {
-    return a + b;
-    console.log('hello');  // this hello will not execute because when we write return in a function the execution of a funtion stop immediately
+  return a + b;
+  console.log('hello');  // this hello will not execute because when we write return in a function the execution of a funtion stop immediately
 }
 
 let sumValue = sum(7, 8);
@@ -84,12 +84,12 @@ if (true) {
   let city = "Islamabad";
 }
 //console.log(city);  // ❌ Error: city is not defined
-                       //✅ If you used var city = "Islamabad"; instead, it would be function-scoped, not block-scoped.
+//✅ If you used var city = "Islamabad"; instead, it would be function-scoped, not block-scoped.
 
 
 /*Lexical scope means a variable is accessible based on where it’s written in the code — not how or when the function is called.
 
-📌 Inner functions can access variables from outer functions.*/                       
+📌 Inner functions can access variables from outer functions.*/
 
 
 function outer() {
@@ -134,14 +134,14 @@ function greet() {
 /*-------------------------------------------------------function expression--------------------------*/
 
 //A function expression means storing a function inside a variable. The function can be anonymous (no name) or named.//
-const greet1 = function() {
+const greet1 = function () {
   console.log("Hello!");
 };
 greet1();  // Output: Hello!
 
 
 
-const sayHi = function() {
+const sayHi = function () {
   console.log("Hi there!");
 };
 sayHi();  // Output: Hi there!
@@ -157,7 +157,7 @@ console.log(add(5, 3));  // Output: 8   You can’t call sum(5, 3) outside; only
 
 
 //sayHello1();  // ❌ Error — Cannot access before initialization
-const sayHello1 = function() {
+const sayHello1 = function () {
   console.log("Hello from Expression!");
 };
 
@@ -170,7 +170,7 @@ function add1(a, b) {
 console.log(add1(2, 3)); // ✅ Output: 5
 
 // Function Expression
-const subtract = function(a, b) {
+const subtract = function (a, b) {
   return a - b;
 };
 console.log(subtract(5, 2)); // ✅ Output: 3
@@ -204,17 +204,17 @@ function getChecker(type) {
   console.log("You asked for a", type, "checker.");
 
   if (type === "even") {
-    return function(num) {
+    return function (num) {
       console.log("Checking if", num, "is even.");
       return num % 2 === 0;
     };
   } else if (type === "odd") {
-    return function(num) {
+    return function (num) {
       console.log("Checking if", num, "is odd.");
       return num % 2 !== 0;
     };
   } else {
-    return function() {
+    return function () {
       console.log("Invalid checker type!");
       return "Invalid type";
     };
@@ -231,16 +231,16 @@ getChecker(9);
 
 
 
-let calculator={
+let calculator = {
 
 
-  add: function(a,b){
-    return a+b;
+  add: function (a, b) {
+    return a + b;
   },
-  sub:function(a,b){
-    return a-b;
+  sub: function (a, b) {
+    return a - b;
   },
-  mul:function(a,b){
+  mul: function (a, b) {
 
   }
 }
@@ -264,7 +264,7 @@ let calculator={
   }
 }*/
 
-console.log(calculator.add(2,3));//5
+console.log(calculator.add(2, 3));//5
 
 
 
@@ -275,7 +275,7 @@ console.log(calculator.add(2,3));//5
 // Q1: Create a function that prints a poem
 
 function printPoem() {
-    console.log('twinke twinkel little star')
+  console.log('twinke twinkel little star')
 }
 printPoem();
 
@@ -283,8 +283,8 @@ printPoem();
 // Q2: create a function to roll a dice & always display the value of the dice from (1 to 6)
 
 function dice() {
-    let randomNumber = Math.floor(Math.random() * 6) + 1;
-    console.log(randomNumber);
+  let randomNumber = Math.floor(Math.random() * 6) + 1;
+  console.log(randomNumber);
 
 
 }
@@ -295,9 +295,9 @@ dice();
 // Q3: create a function  that gives us average of threee numbers;
 
 function calculateAvg(a, b, c) {
-    let sum = a + b + c;
-    let avg = sum / 3;
-    console.log(avg);
+  let sum = a + b + c;
+  let avg = sum / 3;
+  console.log(avg);
 
 }
 
@@ -309,9 +309,9 @@ calculateAvg(10, 10, 10);
 
 
 function multiplicationTable(num) {
-    for (let i = 1; i <= 10; i++) {
-        console.log(`${num} *  ${i}  =  ${num * i}`);
-    }
+  for (let i = 1; i <= 10; i++) {
+    console.log(`${num} *  ${i}  =  ${num * i}`);
+  }
 
 }
 multiplicationTable(9);
@@ -323,12 +323,12 @@ multiplicationTable(6);
 
 
 function sumNNumbers(n) {
-    let sum = 0;
-    for (let i = 1; i <= n; i++) {
-        sum = sum + i;
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum = sum + i;
 
-    }
-    return sum;
+  }
+  return sum;
 
 }
 console.log(sumNNumbers(10));
@@ -344,14 +344,39 @@ console.log(sumNNumbers(3));
 
 let str = ['i', 'live', 'in', 'islamabad'];
 function concatString(str1) {
-    let result="";
-    for (let i = 0; i < str.length; i++) {
-        result += str[i];
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    result += str[i];
 
 
-    }
-    return result;
+  }
+  return result;
 }
 console.log(concatString(str));
+
+
+
+//  Q7 : write a javascript function that return array elements larger than number.
+
+function getElements(arr, num) {
+  let arr1 = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > num) {
+      arr1.push(arr[i]);
+
+    }
+  }
+  console.log(arr1);
+}
+
+let array1=[2,3,5,9,1,8,10];
+let num1=2;
+getElements(array1,num1);
+
+
+
+/* Q:8  Qs2. Write a JavaScript function to extract unique characters from a string.
+Example: str = “abcdabcdefgggh” ans = “abcdefgh”*/
+
 
 
