@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>classList in JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: lightgray;
+      margin-bottom: 20px;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+    }
+    .highlight {
+      background-color: gold;
+    }
+    .dark {
+      background-color: black;
+      color: white;
+    }
+    button {
+      padding: 8px 12px;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+    pre {
+      background: #f9f9f9;
+      padding: 10px;
+      border-left: 4px solid #ccc;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript <code>classList</code> Notes</h1>
+
+  <div class="box shape" id="box">Box</div>
+
+  <button onclick="addClass()">Add Class</button>
+  <button onclick="removeClass()">Remove Class</button>
+  <button onclick="toggleClass()">Toggle Class</button>
+  <button onclick="checkClass()">Check Class</button>
+  <button onclick="replaceClass()">Replace Class</button>
+
+  <hr>
+
+  <h2>🔹 What is <code>classList</code>?</h2>
+  <p><code>classList</code> is a property that lets you add, remove, toggle, or check CSS classes on HTML elements easily.</p>
+
+  <h2>🔹 Syntax & Examples</h2>
+  <pre><code>// Select element
+let box = document.getElementById("box");
+
+// Add a class
+box.classList.add("highlight");
+
+// Remove a class
+box.classList.remove("highlight");
+
+// Toggle a class
+box.classList.toggle("dark");
+
+// Check if a class exists
+box.classList.contains("highlight"); // returns true or false
+
+// Replace a class
+box.classList.replace("highlight", "dark");
+  </code></pre>
+
+  <h2>🔹 Output in Console</h2>
+  <p>Each button above shows how <code>classList</code> methods work. Open your browser console to see results.</p>
+
+  <script>
+    const box = document.getElementById("box");
+
+    function addClass() {
+      box.classList.add("highlight");
+      console.log("Class 'highlight' added.");
+    }
+
+    function removeClass() {
+      box.classList.remove("highlight");
+      console.log("Class 'highlight' removed.");
+    }
+
+    function toggleClass() {
+      box.classList.toggle("dark");
+      console.log("Class 'dark' toggled.");
+    }
+
+    function checkClass() {
+      const hasClass = box.classList.contains("highlight");
+      console.log("Has 'highlight'? ", hasClass);
+    }
+
+    function replaceClass() {
+      box.classList.replace("highlight", "dark");
+      console.log("Class 'highlight' replaced with 'dark'.");
+    }
+  </script>
+
+</body>
+</html>

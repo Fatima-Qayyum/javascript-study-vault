@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manipulating Styles in JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      margin-bottom: 20px;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+    pre {
+      background: #f0f0f0;
+      padding: 10px;
+      border-left: 4px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Manipulating Style in JavaScript</h1>
+
+  <div class="box" id="box">Box</div>
+  <button onclick="changeStyle()">Change Style</button>
+
+  <div class="section">
+    <h2>1. Inline Style Manipulation</h2>
+    <p>You can change the style of an element using <code>element.style.property</code>.</p>
+
+    <pre><code>let box = document.getElementById("box");
+box.style.backgroundColor = "coral";
+box.style.color = "white";
+box.style.border = "2px solid black";</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>2. Accessing Computed Style</h2>
+    <p>Use <code>getComputedStyle()</code> to get the final style of an element after all CSS is applied.</p>
+
+    <pre><code>let computed = getComputedStyle(box);
+console.log(computed.backgroundColor);</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>3. Toggle Styles Dynamically</h2>
+    <p>You can also toggle styles using JavaScript to make elements interactive.</p>
+
+    <pre><code>if (box.style.backgroundColor === "coral") {
+  box.style.backgroundColor = "lightblue";
+} else {
+  box.style.backgroundColor = "coral";
+}</code></pre>
+  </div>
+
+  <script>
+    function changeStyle() {
+      let box = document.getElementById("box");
+
+      // Toggle background color
+      if (box.style.backgroundColor === "coral") {
+        box.style.backgroundColor = "lightblue";
+        box.style.color = "black";
+        box.style.border = "none";
+      } else {
+        box.style.backgroundColor = "coral";
+        box.style.color = "white";
+        box.style.border = "2px solid black";
+      }
+
+      // Log the computed background color
+      let computed = getComputedStyle(box);
+      console.log("Computed Background:", computed.backgroundColor);
+    }
+  </script>
+
+</body>
+</html>
