@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adding Elements in JavaScript</title>
+  <style>
+    #container {
+      border: 2px dashed #333;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .box {
+      background-color: #f0f0f0;
+      margin: 5px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Adding Elements using JavaScript</h1>
+  <div id="container">
+    <p>Container Start</p>
+  </div>
+
+  <script>
+    // 1. Create a new element
+    let newDiv = document.createElement("div");
+    newDiv.className = "box";
+    newDiv.innerText = "This is created using createElement()";
+
+    // 2. Append using appendChild()
+    let container = document.getElementById("container");
+    container.appendChild(newDiv);
+
+    // 3. Append another element using append()
+    let anotherDiv = document.createElement("div");
+    anotherDiv.className = "box";
+    anotherDiv.innerText = "This is added using append()";
+    container.append(anotherDiv); // can also add text with append()
+
+    // 4. Insert using insertAdjacentElement()
+    let header = document.createElement("h3");
+    header.innerText = "Inserted before container using insertAdjacentElement()";
+    container.insertAdjacentElement("beforebegin", header);
+
+    // Optional positions for insertAdjacentElement:
+    // 'beforebegin', 'afterbegin', 'beforeend', 'afterend'
+
+  </script>
+</body>
+</html>

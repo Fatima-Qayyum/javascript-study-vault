@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Removing Elements in JavaScript</title>
+  <style>
+    #container {
+      border: 2px solid #333;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .item {
+      background-color: #f9f9f9;
+      margin: 5px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Removing Elements using JavaScript</h1>
+
+  <div id="container">
+    <div class="item" id="child1">Child Element 1</div>
+    <div class="item" id="child2">Child Element 2</div>
+    <div class="item" id="child3">Child Element 3</div>
+  </div>
+
+  <button onclick="removeUsingRemoveChild()">Remove with removeChild()</button>
+  <button onclick="removeUsingRemove()">Remove with remove()</button>
+
+  <script>
+    function removeUsingRemoveChild() {
+      let container = document.getElementById("container");
+      let childToRemove = document.getElementById("child1");
+      container.removeChild(childToRemove); // remove a specific child from its parent
+    }
+
+    function removeUsingRemove() {
+      let elementToRemove = document.getElementById("child2");
+      elementToRemove.remove(); // directly removes the element
+    }
+  </script>
+
+</body>
+</html>

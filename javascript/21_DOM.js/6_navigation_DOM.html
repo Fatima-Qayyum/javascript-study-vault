@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Navigation in JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+    }
+    ul {
+      margin-bottom: 20px;
+    }
+    .output {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-left: 4px solid #ccc;
+    }
+    pre {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-left: 4px solid #ccc;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DOM Navigation in JavaScript</h1>
+
+  <p><strong>DOM Navigation</strong> means moving between elements in the HTML structure (like parent, child, sibling) using JavaScript.</p>
+
+  <h2>Sample HTML Structure:</h2>
+
+  <ul id="myList">
+    <li>Item 1</li>
+    <li id="second">Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <div class="output" id="output"></div>
+
+  <h2>Common Navigation Properties</h2>
+  <ul>
+    <li><code>parentNode</code> – Get the parent of a node</li>
+    <li><code>childNodes</code> – Get all children (elements, text, comments)</li>
+    <li><code>children</code> – Get only element children</li>
+    <li><code>firstChild</code> / <code>firstElementChild</code></li>
+    <li><code>lastChild</code> / <code>lastElementChild</code></li>
+    <li><code>nextSibling</code> / <code>nextElementSibling</code></li>
+    <li><code>previousSibling</code> / <code>previousElementSibling</code></li>
+  </ul>
+
+  <h2>Example Code:</h2>
+  <pre><code>let list = document.getElementById("myList");
+
+let first = list.firstElementChild;        // <li>Item 1</li>
+let second = document.getElementById("second");
+let next = second.nextElementSibling;      // <li>Item 3</li>
+let parent = second.parentNode;            // <ul>
+
+console.log(first.textContent);
+console.log(next.textContent);
+console.log(parent.tagName);
+</code></pre>
+
+  <script>
+    const list = document.getElementById("myList");
+    const second = document.getElementById("second");
+
+    const output = document.getElementById("output");
+
+    const parent = second.parentNode;
+    const next = second.nextElementSibling;
+    const previous = second.previousElementSibling;
+    const first = list.firstElementChild;
+    const last = list.lastElementChild;
+    const allChildren = list.children;
+
+    output.innerHTML = `
+      <strong>Parent Node:</strong> ${parent.tagName} <br>
+      <strong>Next Sibling:</strong> ${next.textContent} <br>
+      <strong>Previous Sibling:</strong> ${previous.textContent} <br>
+      <strong>First Child:</strong> ${first.textContent} <br>
+      <strong>Last Child:</strong> ${last.textContent} <br>
+      <strong>Total Children:</strong> ${allChildren.length}
+    `;
+  </script>
+
+</body>
+</html>
