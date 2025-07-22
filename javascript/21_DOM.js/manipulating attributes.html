@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manipulating Attributes in JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+    pre {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-left: 4px solid #ccc;
+      overflow-x: auto;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Manipulating Attributes in JavaScript</h1>
+
+  <div class="section">
+    <h2>1. getAttribute(attributeName)</h2>
+    <p>Used to <strong>get</strong> the value of an attribute.</p>
+
+    <p><strong>Example:</strong></p>
+    <img id="myImage" src="image.jpg" alt="My Image">
+
+    <pre><code>let img = document.getElementById("myImage");
+let srcValue = img.getAttribute("src");  // "image.jpg"
+console.log(srcValue);</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>2. setAttribute(attributeName, value)</h2>
+    <p>Used to <strong>set or update</strong> the value of an attribute.</p>
+
+    <pre><code>img.setAttribute("alt", "Updated Image");  // changes alt text
+img.setAttribute("width", "300");          // adds width attribute</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>3. removeAttribute(attributeName)</h2>
+    <p>Used to <strong>remove</strong> an attribute from an element.</p>
+
+    <pre><code>img.removeAttribute("width");</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>4. hasAttribute(attributeName)</h2>
+    <p>Checks if an element <strong>has</strong> a specific attribute.</p>
+
+    <pre><code>if (img.hasAttribute("alt")) {
+  console.log("Alt attribute is present.");
+}</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>Complete Example with Button</h2>
+
+    <button id="btn" title="Click me">Click</button>
+
+    <pre><code>let btn = document.getElementById("btn");
+
+console.log(btn.getAttribute("title"));        // "Click me"
+
+btn.setAttribute("title", "Updated Title");
+
+btn.removeAttribute("title");
+
+console.log(btn.hasAttribute("title"));        // false</code></pre>
+  </div>
+
+  <script>
+    // Working JavaScript Example
+    let img = document.getElementById("myImage");
+    console.log("Original src:", img.getAttribute("src"));
+
+    img.setAttribute("alt", "Updated Image");
+    img.setAttribute("width", "300");
+
+    img.removeAttribute("width");
+
+    if (img.hasAttribute("alt")) {
+      console.log("Alt attribute exists.");
+    }
+
+    let btn = document.getElementById("btn");
+    console.log("Button title:", btn.getAttribute("title"));
+    btn.setAttribute("title", "Updated Title");
+    btn.removeAttribute("title");
+    console.log("Has title?", btn.hasAttribute("title"));
+  </script>
+</body>
+</html>
