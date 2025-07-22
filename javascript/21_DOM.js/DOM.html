@@ -1,0 +1,70 @@
+<!-- 
+  🌳 DOM (Document Object Model) Explanation:
+
+  Jab browser HTML page ko load karta hai, to wo HTML ko ek tree-like structure (object model) mein convert karta hai.
+  Is structure ko JavaScript ke through access kar ke hum elements ko read, change, ya delete kar sakte hain.
+
+  DOM humay HTML elements ko JavaScript se control karne ki power deta hai.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Concept Practice - Fatima</title>
+</head>
+<body>
+
+  <h2>🌸 Registration Form Example (DOM Practice)</h2>
+
+  <!-- HTML Form -->
+  <form id="regForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" class="input-field" value="Fatima"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" class="input-field" value="fatima@example.com"><br><br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" class="input-field">
+      <option value="female">Female</option>
+      <option value="male">Male</option>
+    </select><br><br>
+
+    <!-- Button to trigger JavaScript function -->
+    <button type="button" onclick="getFormData()">Submit</button>
+  </form>
+
+  <!-- Output area -->
+  <p id="output"></p>
+
+  <!-- JavaScript starts here -->
+  <script>
+    function getFormData() {
+      // 💡 DOM Selectors in Action:
+
+      // 1. Select by ID
+      const username = document.getElementById("username").value;
+
+      // 2. Select by class name (returns a list, so we pick by index)
+      const email = document.getElementsByClassName("input-field")[1].value;
+
+      // 3. Select by tag name (input elements)
+      const allInputs = document.getElementsByTagName("input");
+      const firstInput = allInputs[0].value;
+
+      // 4. Select using querySelector (CSS style)
+      const gender = document.querySelector("#gender").value;
+
+      // 5. Select using querySelectorAll (returns NodeList)
+      const allFields = document.querySelectorAll(".input-field");
+      const secondField = allFields[1].value;
+
+      // Showing result
+      document.getElementById("output").innerText = 
+        `👤 Username: ${username}\n📧 Email: ${email}\n⚧️ Gender: ${gender}`;
+    }
+  </script>
+
+</body>
+</html>

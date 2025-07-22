@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Text Properties - innerText, textContent, innerHTML</title>
+</head>
+<body>
+
+  <h2>🧠 DOM Text Properties: innerText vs textContent vs innerHTML</h2>
+
+  <!-- Example Element -->
+  <div id="myDiv">
+    Hello <span style="display:none">Hidden</span> World!
+  </div>
+
+  <button onclick="showText()">Click to Compare</button>
+
+  <p id="output1"></p>
+  <p id="output2"></p>
+  <p id="output3"></p>
+
+  <hr>
+
+  <!-- Explanation Section -->
+  <h3>📚 What’s the Difference?</h3>
+  <ul>
+    <li><strong>innerText</strong>: Shows visible text (ignores hidden or display:none)</li>
+    <li><strong>textContent</strong>: Shows all text, including hidden</li>
+    <li><strong>innerHTML</strong>: Shows the HTML structure inside the element</li>
+  </ul>
+
+  <script>
+    function showText() {
+      const div = document.getElementById("myDiv");
+
+      // Get different text types
+      const t1 = div.innerText;
+      const t2 = div.textContent;
+      const t3 = div.innerHTML;
+
+      // Show results
+      document.getElementById("output1").innerText = "🔹 innerText: " + t1;
+      document.getElementById("output2").innerText = "🔸 textContent: " + t2;
+      document.getElementById("output3").innerText = "🧩 innerHTML: " + t3;
+    }
+  </script>
+
+</body>
+</html>
