@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Events Notes</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.8; }
+    h2 { color: darkblue; }
+    code { background: #f2f2f2; padding: 2px 6px; border-radius: 4px; }
+    pre { background: #f4f4f4; padding: 10px; border-left: 4px solid #ccc; }
+  </style>
+</head>
+<body>
+
+  <h1>📘 DOM Events Notes (Basic Inline Events)</h1>
+
+  <h2>1. onclick</h2>
+  <p><strong>When it fires:</strong> When the user clicks on an element (e.g., button, div, etc).</p>
+  <p><strong>Syntax:</strong> <code>&lt;button onclick="functionName()"&gt;Click&lt;/button&gt;</code></p>
+  <pre>
+&lt;button onclick="sayHello()"&gt;Click Me&lt;/button&gt;
+
+&lt;script&gt;
+  function sayHello() {
+    alert("Hello from onclick!");
+  }
+&lt;/script&gt;
+  </pre>
+
+  <h2>2. onmouseenter</h2>
+  <p><strong>When it fires:</strong> When the mouse enters the boundary of an element.</p>
+  <p><strong>Syntax:</strong> <code>&lt;div onmouseenter="doSomething()"&gt;&lt;/div&gt;</code></p>
+  <pre>
+&lt;div onmouseenter="changeColor()"&gt;Hover over me&lt;/div&gt;
+
+&lt;script&gt;
+  function changeColor() {
+    alert("Mouse entered!");
+  }
+&lt;/script&gt;
+  </pre>
+
+  <h2>3. onmouseleave</h2>
+  <p><strong>When it fires:</strong> When the mouse leaves the element's boundary.</p>
+  <p><strong>Syntax:</strong> <code>&lt;div onmouseleave="reset()"&gt;&lt;/div&gt;</code></p>
+  <pre>
+&lt;div onmouseleave="resetColor()"&gt;Leave me&lt;/div&gt;
+
+&lt;script&gt;
+  function resetColor() {
+    alert("Mouse left!");
+  }
+&lt;/script&gt;
+  </pre>
+
+  <h2>4. onchange</h2>
+  <p><strong>When it fires:</strong> When the value of a form element changes (like &lt;select&gt;, &lt;input type="checkbox"&gt;).</p>
+  <p><strong>Syntax:</strong> <code>&lt;select onchange="showFruit(this)"&gt;</code></p>
+  <pre>
+&lt;select onchange="showFruit(this)"&gt;
+  &lt;option value="Apple"&gt;Apple&lt;/option&gt;
+  &lt;option value="Banana"&gt;Banana&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;script&gt;
+  function showFruit(selectBox) {
+    alert("Selected: " + selectBox.value);
+  }
+&lt;/script&gt;
+  </pre>
+
+  <h2>5. oninput</h2>
+  <p><strong>When it fires:</strong> When the user types or inputs data into a text field (fires immediately as the value changes).</p>
+  <p><strong>Syntax:</strong> <code>&lt;input oninput="showInput(this)"&gt;</code></p>
+  <pre>
+&lt;input type="text" oninput="showInput(this)"&gt;
+
+&lt;script&gt;
+  function showInput(inputField) {
+    console.log("You typed: " + inputField.value);
+  }
+&lt;/script&gt;
+  </pre>
+
+</body>
+</html>
