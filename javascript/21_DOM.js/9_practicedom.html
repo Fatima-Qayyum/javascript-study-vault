@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color:red;
+
+        }
+
+        .blue{
+            color:blue;
+        }
+
+        .div{
+            border:2px solid black;
+            background: pink;
+        }
+
+        .btnstyle{
+            background-color: blue;
+            color: white;
+
+
+        }
+
+
+        .practice{
+            text-decoration: underline;
+            color:purple
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let para2= document.createElement('p');
+        para2.innerText='hello fatima how are you!'
+        document.querySelector('body').append(para2);
+        para2.classList.add('red');
+
+
+        let h3=document.createElement('h3');
+        h3.innerText='  hello i am a blue h3!';
+        document.querySelector('body').appendChild(h3);
+        h3.classList.add('blue');
+
+
+
+
+        let div=document.createElement('div');
+        document.querySelector('body').append(div);
+        div.classList.add('div')
+
+
+        let h1= document.createElement('h1');
+        h1.innerText='i m in a div';
+       div.append(h1);
+        let paragraph=document.createElement('p');
+        paragraph.innerText='me too';
+        div.append(paragraph);
+
+
+
+
+
+        /*Qsl. Create a new input and button element on the page using JavaScript only. Set the text of button to "Click me';*/
+
+
+        let inputElement=document.createElement('input');
+        inputElement.placeholder='enter you name';
+        document.querySelector('body').append(inputElement);
+
+         let button=document.createElement('button');
+        button.innerText='CLICK me';
+        document.querySelector('body').append(button);
+
+        /*Qs2. Add following attributes to the element :Change placeholder value of input to "username"
+Change the id of button to "btn'?*/
+button.setAttribute('id','btn');
+inputElement.setAttribute('placeholder','username');
+
+
+/*Qs3. Access the btn using the querySelector and button id. Change the button background
+color to blue and text color to white.*/
+
+
+let btn=document.querySelector('#btn');
+btn.classList.add('btnstyle');
+
+
+let heading=document.createElement('h1');
+heading.innerText='DOM PRACTICE';
+heading.classList.add('practice');
+document.querySelector('body').append(heading);
+
+
+
+let para=document.createElement('p');
+para.innerHTML="hello i am practicing <b>javascript<b>";
+document.querySelector('body').append(para);
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
