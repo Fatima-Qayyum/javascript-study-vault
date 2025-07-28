@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greet() {
+  console.log("Hello!");
+  askName();
+}
+
+function askName() {
+  console.log("What’s your name?");
+}
+
+greet();
+/*   Call Stack Steps:
+greet() is called → pushed onto the stack.
+
+Inside greet(), askName() is called → pushed onto the stack.
+
+askName() finishes → popped off.
+
+greet() finishes → popped off.
+
+📌 The stack is now empty.*/
+
+    </script>
+</body>
+</html>
