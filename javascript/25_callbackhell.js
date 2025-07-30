@@ -100,7 +100,7 @@ Each function should use a setTimeout with 1-second delay to simulate asynchrono
 
 
 // Step One function: aik callback accept karta hai
-function stepOne(callback) {
+/*function stepOne(callback) {
   setTimeout(() => {
     console.log("Step One"); // 1 second baad print karega
     callback(); // jab step one complete ho jaye, toh callback (stepTwo) chalay
@@ -128,7 +128,7 @@ stepOne(function () { // StepOne ko aik anonymous function diya gaya hai
     stepThree(); // StepTwo ke baad StepThree chalaya gaya
   });
 });
-
+*/
 
 
 /*Q5:Create a simulation of a simple morning routine using nested callbacks.
@@ -147,3 +147,36 @@ Use setTimeout with a 1-second delay
 Print its own step
 
 Call the next function through a callback */
+
+
+function wakeUp(callback){
+    setTimeout(()=>{
+        console.log('hello waking up.....');
+        callback();
+
+        
+    },1000)
+    
+
+}
+function brushTeeth(callback){
+setTimeout(()=>{
+    console.log('brushing teeth.............')
+    callback();
+
+        
+    },1000)
+}
+function haveBreakfast(){
+setTimeout(()=>{
+console.log('i am havign breakfast')
+
+    },1000)
+}
+
+wakeUp(function(){
+    brushTeeth(function(){
+        haveBreakfast();
+    })
+})
+
