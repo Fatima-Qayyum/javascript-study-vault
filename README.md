@@ -1,2 +1,1 @@
-# javascript-code
-a code repo for javascript series at chai or code
+A collection of JavaScript concept explanations, personal notes, and practice questions created during my learning journey. This repository reflects my hands-on practice with core JS topics, including code snippets, examples, and learning experiments.
